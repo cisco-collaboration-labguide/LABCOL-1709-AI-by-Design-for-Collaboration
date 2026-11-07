@@ -57,14 +57,6 @@
       "path": "meetings/assistant/index.md",
       "step_headings": 11,
       "captioned_screenshots": 9
-    },
-    {
-      "path": "screenshots/index.md"
-    },
-    {
-      "path": "print/index.md",
-      "step_headings": 11,
-      "captioned_screenshots": 52
     }
   ],
   "legacy_routes": {
@@ -86,5 +78,5 @@
     "module-3b-language-detection-closed-captions-and-real-time-translation": "meetings/captions/",
     "module-3c-ai-assistant-in-webex-meetings": "meetings/assistant/"
   },
-  "preservation": "Original instructional prose and all 51 instructional screenshots are retained, including sample passwords and account details. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide."
+  "preservation": "Original instructional prose and all 51 instructional screenshots are retained, including sample passwords and account details. Exercise headings are shortened, and descriptive step headings and figure captions are added."
 }

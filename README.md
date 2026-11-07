@@ -8,9 +8,9 @@ The original section order and instructional wording are retained, with concise 
 
 ## Documentation layout and image audit
 
-The website follows [LABCOL-2883 Webex Calling Customer Assist](https://cisco-collaboration-labguide.github.io/LABCOL-2883-Webex-Calling-Customer-Assist/index.html). It reuses that guide's typography, spacing, navigation styling, inset hero, journey cards, note boxes, and screenshot frames. Page metadata identifies the lab and module. Existing exercise URLs and source heading anchors remain available, and screenshots open at full resolution. The complete guide remains available as one printable page.
+The website follows [LABCOL-2883 Webex Calling Customer Assist](https://cisco-collaboration-labguide.github.io/LABCOL-2883-Webex-Calling-Customer-Assist/index.html). It reuses that guide's typography, spacing, navigation styling, inset hero, journey cards, note boxes, and screenshot frames. Page metadata identifies the lab and module. Existing exercise URLs and source heading anchors remain available, and screenshots open at full resolution.
 
-[View the complete screenshot inventory](https://cisco-collaboration-labguide.github.io/LABCOL-1709-AI-by-Design-for-Collaboration/screenshots/). All 61 Word image assets are accounted for: 51 instructional screenshots, seven control icons, and two branding images are published; no instructional screenshots are omitted; one non-instructional menu icon is not used. The 60 published files were downloaded and matched byte-for-byte against the Word originals. No image failed the availability or fidelity check. The audit timestamp and per-image results are in `screenshot-audit.json`.
+All 61 Word image assets are accounted for: 51 instructional screenshots, seven control icons, and two branding images are published; no instructional screenshots are omitted; one non-instructional menu icon is not used. The 60 published files were downloaded and matched byte-for-byte against the Word originals. No image failed the availability or fidelity check. The audit timestamp and per-image results are in `screenshot-audit.json`.
 
 ## Public edition
 

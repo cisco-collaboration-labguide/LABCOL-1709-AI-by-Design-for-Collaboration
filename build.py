@@ -13,7 +13,6 @@ from mkdocs.config import load_config
 from mkdocs.commands.build import build as build_mkdocs
 
 SOURCE=json.loads((ROOT/'source-manifest.json').read_text(encoding='utf-8'))
-AUDIT=json.loads((ROOT/'screenshot-audit.json').read_text(encoding='utf-8'))
 MODEL=json.loads((ROOT/'page-manifest.json').read_text(encoding='utf-8'))
 PAGES=MODEL['pages']
 RAW=(ROOT/'content.html').read_text(encoding='utf-8')
@@ -24,6 +23,9 @@ STAGE=ROOT/'site'
 for target in [DOCS,STAGE]:
     assert target.resolve().parent==ROOT.resolve() and target.name in ['.build-docs','site'],target
 DOCS.mkdir(exist_ok=True)
+# Remove generated pages left over from builds before the Reference tab was retired.
+for retired_page in ('screenshots/index.md', 'print/index.md', 'screenshot-audit.json'):
+    (DOCS / retired_page).unlink(missing_ok=True)
 FIGURES={7:'Workstation 1 desktop and lab credential files',12:'Control Hub idle timeout',13:'Open the AI Assistant customization settings',14:'Calling AI feature settings',15:'Messaging AI features',16:'Meeting AI features',17:'General AI settings and search sources',21:'Open Cisco AI Assistant from a space',22:'Ask a question about the conversation',23:'Review the AI answer and source citations',24:'Cisco AI Assistant in the messaging space',25:'Choose a summary time range',26:'Review the generated space summary',28:'Draft a message and select Rewrite',30:'Preview a rewritten message',31:'Send the updated message',33:'Choose and save a translation language',34:'Translate an individual message',35:'Translated messages in the space',36:'Start live translation',37:'Live translations in the conversation',38:'Open the Meetings tab and AI Assistant',40:'Review and confirm the AI-scheduled meeting',42:'Enable real-time translation and transcription',44:'Join from the meeting reminder',45:'Choose a caption language',46:'Spoken language and caption controls',47:'Language detection on the speaking workstation',48:'Translated captions on the receiving workstation',49:'Select Bosnian captions',50:'French captions on one workstation',51:'Bosnian captions on the other workstation',52:'Start Cisco AI Assistant for the meeting',53:'Start the meeting recording',54:'Catch me up',55:'Was my name mentioned?',56:'What are the action items?',57:'Ask about meeting highlights',58:'Ask about the customer response',60:'Post-meeting summary',61:'Post-meeting transcript'}
 STEPS={
  'setup/index.html':['Open Control Hub','Sign in as Charles','Set the idle timeout','Open the AI settings','Enable the lab features'],
@@ -57,18 +59,12 @@ def md_heading(node,level,title):
 
 def prepare_page(page):
     soup=BeautifulSoup(''.join(SECTIONS[key] for key in page['sections']),'html.parser')
-    output=[];figure_count=0;step_count=0;heading_count=0;step_page=page['path'];step_section='guide';background=False
-    full=page['path']=='print/index.html'
-    if full:
-        output.append('# Complete printable guide\n\nAI by Design for Collaboration · LABCOL-1709\n\nHussain Ali and Omer Ilyas · Technical Marketing Engineers\n\n')
+    output=[];figure_count=0;step_count=0;heading_count=0;background=False
     for node in list(soup.contents):
         if not isinstance(node,Tag):continue
         source_block=node.get('data-source-block')
         if node.name in ['h2','h3']:
             original=text(node)
-            if full:
-                step_count=0;step_page=MODEL['legacy_routes'].get(node.get('id'),page['path']);step_section=node.get('id','guide')
-                output.append(md_heading(node,2 if node.name=='h2' else 3,original));continue
             parent=page['path'] in ['setup/index.html','messaging/ask-assistant/index.html'] and heading_count==0
             if parent:
                 node.name='p';node['class']=['lab-module'];node.string=module(original)
@@ -93,10 +89,10 @@ def prepare_page(page):
         complete=original_text.startswith(('This completes','This task is now completed'))
         if numbered and not complete:
             step_count+=1
-            names=STEPS.get(step_page,[])
+            names=STEPS.get(page['path'],[])
             title=names[step_count-1] if step_count<=len(names) else 'Continue the exercise'
-            marker=f'{step_section}-step-{step_count}' if full else f'step-{step_count}'
-            output.append('\n'+('####' if full else '##')+f' Step {step_count}: {title} {{ #{marker} .lab-step-title }}\n\n')
+            marker=f'step-{step_count}'
+            output.append('\n'+'##'+f' Step {step_count}: {title} {{ #{marker} .lab-step-title }}\n\n')
         if not numbered:
             for strong in list(node.select('strong')):strong.unwrap()
         for mark in list(node.select('mark')):mark.unwrap()
@@ -138,20 +134,12 @@ def prepare_page(page):
     markup=re.sub(r'((?:src|href)=")assets/',lambda m:m[1]+base+'assets/',markup)
     return markup,{'step_headings':step_count,'captioned_screenshots':figure_count}
 
-def audit_page():
-    lines=['# Screenshot availability','','All **51 instructional screenshots** are included, including the original sample credentials and session examples. The seven control icons and two branding images are also available. All 60 published assets match their Word originals.','','No instructional screenshot is omitted. One non-instructional menu icon is unused. The table accounts for all 61 Word images.','','Last image check: '+AUDIT['checked_at']+'.','','| Source image | Type | Status | Preview or reason |','| --- | --- | --- | --- |']
-    for item in AUDIT['images']:
-        value=('[Open original](../'+item['path']+')') if item['status']=='Published' else item['reason']
-        lines.append('| '+item['file']+' | '+item['role']+' | '+item['status']+' | '+value+' |')
-    return '\n'.join(lines)+'\n'
-
 def build():
     generated=[];formatting=[]
     home=(ROOT/'theme/home.md').read_text(encoding='utf-8')
     (DOCS/'index.md').write_text(home,encoding='utf-8',newline='\n')
     for page in PAGES:
-        if page['path']=='screenshots/index.html':body=audit_page();stats={}
-        else:body,stats=prepare_page(page)
+        body,stats=prepare_page(page)
         target='overview.md' if page['path']=='index.html' else page['path'].replace('index.html','index.md')
         path=DOCS/target;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(body,encoding='utf-8',newline='\n')
         generated.append(target);formatting.append({'path':target,**stats})
@@ -160,13 +148,13 @@ def build():
     shutil.copy2(ROOT/'theme/lab.js',DOCS/'javascripts/lab.js')
     shutil.copytree(ROOT/'assets/source-guide',DOCS/'assets/source-guide',dirs_exist_ok=True)
     shutil.copy2(ROOT/'theme/cisco-live-logo.png',DOCS/'assets/cisco-live-logo.png')
-    for name in ['source-manifest.json','screenshot-audit.json']:shutil.copy2(ROOT/name,DOCS/name)
+    for name in ['source-manifest.json']:shutil.copy2(ROOT/name,DOCS/name)
     config=load_config(config_file=str(ROOT/'mkdocs.yml'))
     config.extra['legacy_routes']=ROUTES
     # MkDocs cleans only this validated, generated output directory.
     assert Path(config.site_dir).resolve()==STAGE.resolve() and STAGE.resolve().parent==ROOT.resolve()
     build_mkdocs(config)
-    (ROOT/'formatting-manifest.json').write_text(json.dumps({'theme':'MkDocs Material 9.7.7','formatting_reference':'https://cisco-collaboration-labguide.github.io/LABCOL-2883-Webex-Calling-Customer-Assist/index.html','source':'content.html','pages':formatting,'legacy_routes':ROUTES,'preservation':'Original instructional prose and all 51 instructional screenshots are retained, including sample passwords and account details. Exercise headings are shortened, and descriptive step headings and figure captions are added. The printable guide retains all original source blocks and headings. The task-completed boilerplate is omitted from the overview and retained in the printable guide.'},indent=2)+'\n',encoding='utf-8',newline='\n')
+    (ROOT/'formatting-manifest.json').write_text(json.dumps({'theme':'MkDocs Material 9.7.7','formatting_reference':'https://cisco-collaboration-labguide.github.io/LABCOL-2883-Webex-Calling-Customer-Assist/index.html','source':'content.html','pages':formatting,'legacy_routes':ROUTES,'preservation':'Original instructional prose and all 51 instructional screenshots are retained, including sample passwords and account details. Exercise headings are shortened, and descriptive step headings and figure captions are added.'},indent=2)+'\n',encoding='utf-8',newline='\n')
     print('Built Material site with',len(generated)+1,'pages and',len(SOURCE['included_images']),'unchanged source images.')
 
 if __name__=='__main__':build()

@@ -93,36 +93,6 @@
       "sections": [
         "module-3c-ai-assistant-in-webex-meetings"
       ]
-    },
-    {
-      "path": "screenshots/index.html",
-      "title": "Screenshot availability",
-      "group": "Reference",
-      "sections": []
-    },
-    {
-      "path": "print/index.html",
-      "title": "Complete printable guide",
-      "group": "Reference",
-      "sections": [
-        "webex-suite-ai-overview",
-        "accessing-your-lab",
-        "connect-to-the-workstations-via-remote-desktop",
-        "login-to-the-webex-clients",
-        "login-to-collaboration-control-hub-from-within-workstation-1",
-        "alternate-instructions-for-accessing-collaboration-control-hub",
-        "module-1-setup-your-lab-environment",
-        "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub",
-        "module-2-enhancing-messaging-with-webex-ai",
-        "module-2a-ask-me-anything-ai-assistant-for-messaging",
-        "module-2b-space-summaries-automated-conversation-overviews",
-        "module-2c-smart-rewrite-ai-powered-message-refinement",
-        "module-2d-real-time-message-translation",
-        "module-3-ai-powered-webex-meetings",
-        "module-3a-schedule-your-meetings-with-cisco-ai-assistant",
-        "module-3b-language-detection-closed-captions-and-real-time-translation",
-        "module-3c-ai-assistant-in-webex-meetings"
-      ]
     }
   ],
   "legacy_routes": {

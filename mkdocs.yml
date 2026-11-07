@@ -67,8 +67,5 @@ nav:
       - Schedule with AI: meetings/schedule/index.md
       - Captions and translation: meetings/captions/index.md
       - Meeting AI Assistant: meetings/assistant/index.md
-  - Reference:
-      - Screenshot availability: screenshots/index.md
-      - Complete printable guide: print/index.md
 extra:
   generator: false
