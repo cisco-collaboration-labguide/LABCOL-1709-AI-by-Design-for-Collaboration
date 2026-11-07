@@ -350,7 +350,7 @@ Now, let&#x27;s add/enable Cisco AI Assistant to this meeting and see how it hel
 
 AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
-3. It will start the <strong>AI Assistant</strong> for this meeting and plays a recording saying  that “this meeting is being transcribed and summarized”. <strong>Note</strong>, in the Control Hub, the administrator can enable Automatic AI Assistant summarization on call recording, meaning when a call recording is started, the AI Assistant will automatically start summarizing.
+3. It will start the <strong>AI Assistant</strong> for this meeting and plays a recording saying that “this meeting is being transcribed and summarized”. <strong>Note</strong>, in the Control Hub, the administrator can enable Automatic AI Assistant summarization on call recording, meaning when a call recording is started, the AI Assistant will automatically start summarizing.
 
 4. Now, click <strong>Record</strong> button on the meeting window, to start recording of this meeting. It will bring up a pop-up window with available options for recording, leave all defaults and click <strong>Record</strong> again on the pop-up window.
 
@@ -362,7 +362,7 @@ AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 6. Now, on the physical/attendee workstation, start talking and mention <strong>Anita Perez’s</strong> name along with some action items, like <em><strong>Anita we need to push the software release deadline</strong></em>, or <em><strong>Anita send a follow up email to the customer</strong></em> or <em><strong>Anita we need to check on shipment delivery</strong></em> etc.,
 
-7. Now, go to Anita’s workstation (workstation 1) over WebRDP and the current meeting window. Explore any of the <strong>AI Assistant</strong> options available:  <strong>Catch</strong><strong> me up</strong> or <strong>Was</strong><strong> my name mentioned</strong>? Or <strong>What are the action items</strong>?
+7. Now, go to Anita’s workstation (workstation 1) over WebRDP and the current meeting window. Explore any of the <strong>AI Assistant</strong> options available: <strong>Catch</strong><strong> me up</strong> or <strong>Was</strong><strong> my name mentioned</strong>? Or <strong>What are the action items</strong>?
 
 <a class="figure-link" href="assets/source-guide/image54.png" target="_blank" rel="noopener" aria-label="Open screenshot 54 at full size"><img class="source-figure" src="assets/source-guide/image54.png" width="1882" height="1230" style="width:min(100%,1882px);aspect-ratio:1882/1230" alt="A screenshot of a video chat
 
