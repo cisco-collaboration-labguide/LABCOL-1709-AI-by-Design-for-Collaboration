@@ -26,8 +26,9 @@ DOCS.mkdir(exist_ok=True)
 # Remove generated pages left over from builds before the Reference tab was retired.
 for retired_page in ('screenshots/index.md', 'print/index.md', 'screenshot-audit.json'):
     (DOCS / retired_page).unlink(missing_ok=True)
-FIGURES={7:'Workstation 1 desktop and lab credential files',12:'Control Hub idle timeout',13:'Open the AI Assistant customization settings',14:'Calling AI feature settings',15:'Messaging AI features',16:'Meeting AI features',17:'General AI settings and search sources',21:'Open Cisco AI Assistant from a space',22:'Ask a question about the conversation',23:'Review the AI answer and source citations',24:'Cisco AI Assistant in the messaging space',25:'Choose a summary time range',26:'Review the generated space summary',28:'Draft a message and select Rewrite',30:'Preview a rewritten message',31:'Send the updated message',33:'Choose and save a translation language',34:'Translate an individual message',35:'Translated messages in the space',36:'Start live translation',37:'Live translations in the conversation',38:'Open the Meetings tab and AI Assistant',40:'Review and confirm the AI-scheduled meeting',42:'Enable real-time translation and transcription',44:'Join from the meeting reminder',45:'Choose a caption language',46:'Spoken language and caption controls',47:'Language detection on the speaking workstation',48:'Translated captions on the receiving workstation',49:'Select Bosnian captions',50:'French captions on one workstation',51:'Bosnian captions on the other workstation',52:'Start Cisco AI Assistant for the meeting',53:'Start the meeting recording',54:'Catch me up',55:'Was my name mentioned?',56:'What are the action items?',57:'Ask about meeting highlights',58:'Ask about the customer response',60:'Post-meeting summary',61:'Post-meeting transcript'}
+FIGURES={7:'Open the workstation through Remote Desktop',12:'Control Hub idle timeout',13:'Open the AI Assistant customization settings',14:'Calling AI feature settings',15:'Messaging AI features',16:'Meeting AI features',17:'General AI settings and search sources',21:'Open Cisco AI Assistant from a space',22:'Ask a question about the conversation',23:'Review the AI answer and source citations',24:'Cisco AI Assistant in the messaging space',25:'Choose a summary time range',26:'Review the generated space summary',28:'Draft a message and select Rewrite',30:'Preview a rewritten message',31:'Send the updated message',33:'Choose and save a translation language',34:'Translate an individual message',35:'Translated messages in the space',36:'Start live translation',37:'Live translations in the conversation',38:'Open the Meetings tab and AI Assistant',40:'Review and confirm the AI-scheduled meeting',42:'Enable real-time translation and transcription',44:'Join from the meeting reminder',45:'Choose a caption language',46:'Spoken language and caption controls',47:'Language detection on the speaking workstation',48:'Translated captions on the receiving workstation',49:'Select Bosnian captions',50:'French captions on one workstation',51:'Bosnian captions on the other workstation',52:'Start Cisco AI Assistant for the meeting',53:'Start the meeting recording',54:'Catch me up',55:'Was my name mentioned?',56:'What are the action items?',57:'Ask about meeting highlights',58:'Ask about the customer response',60:'Post-meeting summary',61:'Post-meeting transcript'}
 STEPS={
+ 'getting-started/index.html':['Open the dCloud lab portal','Select LABCOL-1709','Enter your email and launch the lab','Open your assigned lab pod'],
  'setup/index.html':['Open Control Hub','Sign in as Charles','Set the idle timeout','Open the AI settings','Enable the lab features'],
  'messaging/ask-assistant/index.html':['Open Webex','Open AI Assistant','Ask about the space'],
  'messaging/space-summaries/index.html':['Generate a space summary'],
@@ -41,9 +42,8 @@ SHORT={
  'accessing-your-lab':'Access your lab',
  'connect-to-the-workstations-via-remote-desktop':'Connect to the workstations',
  'login-to-the-webex-clients':'Sign in to Webex',
- 'login-to-collaboration-control-hub-from-within-workstation-1':'Sign in to Control Hub',
- 'alternate-instructions-for-accessing-collaboration-control-hub':'Alternative Control Hub access'}
-FIGURES.update({4:'Locate the sample dCloud VPN connection details',5:'Connect with Cisco Secure Client',6:'Locate workstation credentials in the lab session',8:'Control Hub sign-in example',9:'Locate the lab organization and sign-in details',10:'Locate the session DNS name and session ID',11:'Sign in to Control Hub as Charles',32:'Open the Webex profile and translation settings',39:'Sign in to schedule a meeting',41:'Locate the lab site and subscription details'})
+ 'login-to-collaboration-control-hub-from-within-workstation-1':'Sign in to Control Hub'}
+FIGURES.update({4:'Select Explore for LABCOL-1709',5:'Enter your email and launch the lab',6:'Assigned lab pod homepage',8:'Workstation desktop and lab credential files',9:'Locate the workstation sign-in details',10:'Locate the Webex and Control Hub credentials',11:'Sign in to Control Hub as Charles',32:'Open the Webex profile and translation settings',39:'Sign in to schedule a meeting',41:'Locate the lab site and subscription details'})
 ROUTES=dict(MODEL['legacy_routes'])
 for key,value in list(ROUTES.items()):
     ROUTES[key]='overview/' if value=='index.html' else value.replace('index.html','')
@@ -79,7 +79,7 @@ def prepare_page(page):
                 output.append('<p class="lab-byline" data-format-generated="true">LABCOL-1709 · AI by Design for Collaboration<br>Hussain Ali and Omer Ilyas, Technical Marketing Engineers</p>\n\n')
             heading_count+=1;continue
         if source_block=='24' and page['path']=='index.html':continue
-        if source_block=='187' and page['path']=='meetings/index.html':
+        if source_block=='173' and page['path']=='meetings/index.html':
             output.append('<details class="admonition note"><summary>Background: how AI supports Webex meetings</summary>\n\n');background=True
         numeric=node.select_one('.step-number')
         numbered=numeric is not None and text(numeric)!='•'
@@ -123,7 +123,7 @@ def prepare_page(page):
         if not complete and original_text.startswith(('Note:','NOTE:','Important!','VERY IMPORTANT NOTE:')):
             aside=soup.new_tag('div',attrs={'class':'lab-note'})
             title=soup.new_tag('p',attrs={'class':'admonition-title','data-format-generated':'true'})
-            title.string='Microphone prerequisite' if source_block=='186' else 'Note'
+            title.string='Microphone prerequisite' if source_block=='172' else 'Note'
             aside.append(title);aside.append(node.extract());node=aside
         output.append(str(node)+'\n\n')
     if background:output.append('</details>\n\n')

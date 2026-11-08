@@ -14,25 +14,19 @@ In this hands-on lab, you will unlock the revolutionary potential of <strong>Art
 
 ## Accessing your Lab
 
-Click on the <strong>Details</strong> from the dCloud eXPO page and use the Host, Username and Password to connect using Cisco Secure Client (formerly AnyConnect) to your dedicated dCloud session.
+All components for this lab can be accessed through a web browser.
 
-Also note your session ID as displayed below. In the example below, following are the details.
+1. Open a browser on your physical workstation and go to <a href="https://www.ciscodcloud.com/apps/expo/adf8jy5xlh0f67118you9y4yi">https://www.ciscodcloud.com/apps/expo/adf8jy5xlh0f67118you9y4yi</a>
 
-AnyConnect (Cisco Secure Client) Host: use the host provided in your assigned dCloud session.
+2. Click <strong>Explore </strong>for LABCOL-1709. <br><a class="figure-link" href="assets/source-guide/image4.png" target="_blank" rel="noopener" aria-label="Open screenshot 4 at full size"><img class="source-figure" src="assets/source-guide/image4.png" width="998" height="1218" style="width:min(100%,998px);aspect-ratio:998/1218" alt="Lab guide screenshot 4" loading="lazy" decoding="async"></a>
 
-AnyConnect (Cisco Secure Client) Username: use the username provided in your assigned dCloud session.
+3. Enter your email and click <strong>Launch. </strong>
 
-AnyConnect (Cisco Secure Client) Password: use the password provided in your assigned dCloud session.
+<a class="figure-link" href="assets/source-guide/image5.png" target="_blank" rel="noopener" aria-label="Open screenshot 5 at full size"><img class="source-figure" src="assets/source-guide/image5.png" width="1166" height="546" style="width:min(100%,1166px);aspect-ratio:1166/546" alt="Lab guide screenshot 5" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image4.png" target="_blank" rel="noopener" aria-label="Open screenshot 4 at full size"><img class="source-figure" src="assets/source-guide/image4.png" width="1340" height="477" style="width:min(100%,1340px);aspect-ratio:1340/477" alt="A screenshot of a computer
+4. You will be automatically assigned to a lab pod, and you will be taken to the Lab homepage as shown below.
 
-Description automatically generated" loading="lazy" decoding="async"></a>
-
-<a class="figure-link" href="assets/source-guide/image5.png" target="_blank" rel="noopener" aria-label="Open screenshot 5 at full size"><img class="source-figure" src="assets/source-guide/image5.png" width="887" height="281" style="width:min(100%,887px);aspect-ratio:887/281" alt="A screenshot of a computer
-
-Description automatically generated" loading="lazy" decoding="async"></a>
-
-<strong>Important!</strong><strong> </strong><strong>Each</strong><strong> </strong><strong>dCloud</strong><strong> </strong><strong>session</strong><strong> </strong><strong>has</strong><strong> </strong><strong>its</strong><strong> </strong><strong>own</strong><strong> </strong><strong>unique</strong><strong> </strong><strong>details.</strong><strong> Do not use the credentials shown above in the screenshots.</strong>Continue to next step after connecting to the pod via the Cisco Secure Client.
+<a class="figure-link" href="assets/source-guide/image6.png" target="_blank" rel="noopener" aria-label="Open screenshot 6 at full size"><img class="source-figure" src="assets/source-guide/image6.png" width="478" height="520" style="width:min(100%,478px);aspect-ratio:478/520" alt="Lab guide screenshot 6" loading="lazy" decoding="async"></a>
 
 ## Connect to the Workstations via Remote Desktop
 
@@ -42,53 +36,27 @@ The user for Workstation 1 in this lab will be Charles Holland (<strong>cholland
 
 To connect to Workstation 2, follow similar instructions. The user for Workstation 2 will be Anita Perez (<strong>aperez</strong>).
 
-<a class="figure-link" href="assets/source-guide/image6.png" target="_blank" rel="noopener" aria-label="Open screenshot 6 at full size"><img class="source-figure" src="assets/source-guide/image6.png" width="1321" height="523" style="width:min(100%,1321px);aspect-ratio:1321/523" alt="A screenshot of a computer
+<a class="figure-link" href="assets/source-guide/image7.png" target="_blank" rel="noopener" aria-label="Open screenshot 7 at full size"><img class="source-figure" src="assets/source-guide/image7.png" width="1704" height="1110" style="width:min(100%,1704px);aspect-ratio:1704/1110" alt="Lab guide screenshot 7" loading="lazy" decoding="async"></a>
 
-Description automatically generated" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image8.png" target="_blank" rel="noopener" aria-label="Open screenshot 8 at full size"><img class="source-figure" src="assets/source-guide/image8.png" width="2650" height="1608" style="width:min(100%,2650px);aspect-ratio:2650/1608" alt="Lab guide screenshot 8" loading="lazy" decoding="async"></a>
 
-<a class="figure-link" href="assets/source-guide/image7.png" target="_blank" rel="noopener" aria-label="Open screenshot 7 at full size"><img class="source-figure" src="assets/source-guide/image7.png" width="3661" height="1659" style="width:min(100%,3661px);aspect-ratio:3661/1659" alt="Lab guide screenshot 7" loading="lazy" decoding="async"></a>
+Within Workstation 1’s Desktop, there will be a file named Session_info.txt or WEBEX_Password.txt as shown above. Launch the file to get the username and password for the Webex App and the Collaboration Control Hub for this lab.
 
-Within Workstation 1’s Desktop, there will be a file named WEBEX_PASSWORD.txt or Session_Info.txt as shown above. Launch the file to get the username and password for the Webex App and the Collaboration Control Hub for this lab.
-
-<a class="figure-link" href="assets/source-guide/image8.png" target="_blank" rel="noopener" aria-label="Open screenshot 8 at full size"><img class="source-figure" src="assets/source-guide/image8.png" width="880" height="336" style="width:min(100%,880px);aspect-ratio:880/336" alt="Lab guide screenshot 8" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image9.png" target="_blank" rel="noopener" aria-label="Open screenshot 9 at full size"><img class="source-figure" src="assets/source-guide/image9.png" width="880" height="336" style="width:min(100%,880px);aspect-ratio:880/336" alt="Lab guide screenshot 9" loading="lazy" decoding="async"></a>
 
 OR
 
-<a class="figure-link" href="assets/source-guide/image9.png" target="_blank" rel="noopener" aria-label="Open screenshot 9 at full size"><img class="source-figure" src="assets/source-guide/image9.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 9" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image10.png" target="_blank" rel="noopener" aria-label="Open screenshot 10 at full size"><img class="source-figure" src="assets/source-guide/image10.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 10" loading="lazy" decoding="async"></a>
 
 ## Login to the Webex Clients
 
 Login to the Webex App from within workstation 1 for the user Charles Holland (cholland) and from within workstation 2 for the user Anita Perez (aperez). Credentials should be in the respective files placed on the Desktops of the respective workstations. Refer to an example file with the credential details:
 
-<a class="figure-link" href="assets/source-guide/image9.png" target="_blank" rel="noopener" aria-label="Open screenshot 9 at full size"><img class="source-figure" src="assets/source-guide/image9.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 9" loading="lazy" decoding="async"></a>
+<a class="figure-link" href="assets/source-guide/image10.png" target="_blank" rel="noopener" aria-label="Open screenshot 10 at full size"><img class="source-figure" src="assets/source-guide/image10.png" width="602" height="276" style="width:min(100%,602px);aspect-ratio:602/276" alt="Lab guide screenshot 10" loading="lazy" decoding="async"></a>
 
 ## Login to Collaboration Control Hub from within Workstation 1
 
 Lauch the Chrome browser from within workstation 1and go to <a href="https://admin.webex.com/">https://admin.webex.com</a>. Login using the credentials from the WEBEX_PASSWORD.txt file from the previous section. If you do not see the WEBEX_PASSWORD.txt file, follow the instructions below. Otherwise, begin Module 1 of this lab. All the lab tasks should be completed from within  Workstation 1
-
-<strong>Now you can proceed with the lab modules.</strong>
-
-### Alternate instructions for accessing Collaboration Control hub
-
-Before we can proceed to login to Collaboration Control Hub, we need the DNS name, username, password, and session ID. Within the session details page, select <strong>DNS Address</strong> and copy the top level FQDN as displayed below. In the example below:
-
-DNS Address / FQDN of our Webex organization: use the FQDN shown in your assigned session.
-
-Session ID: use the ID shown in your assigned session.
-
-Control Hub Username: cholland@<FQDN>, using the FQDN shown in your assigned session.
-
-Control Hub Password: obtain the password privately from your assigned session or instructor.
-
-<strong><a class="figure-link" href="assets/source-guide/image10.png" target="_blank" rel="noopener" aria-label="Open screenshot 10 at full size"><img class="source-figure" src="assets/source-guide/image10.png" width="1292" height="617" style="width:min(100%,1292px);aspect-ratio:1292/617" alt="A screenshot of a computer
-
-Description automatically generated" loading="lazy" decoding="async"></a></strong>
-
-1) On your PC, open Chrome browser and navigate to <a href="https://admin.webex.com/">https://admin.webex.com</a>
-
-2) Login as Charles Holland with the email and password provided privately for your assigned session.
-
-Once logged in, you should see this home page for <strong>Collaboration</strong><strong> </strong><strong>Control</strong><strong> Hub</strong>:
 
 <strong>Now you can proceed with the lab modules.</strong>
 
@@ -362,7 +330,7 @@ AI-generated content may be incorrect." loading="lazy" decoding="async"></a>
 
 6. Now, on the physical/attendee workstation, start talking and mention <strong>Anita Perez’s</strong> name along with some action items, like <em><strong>Anita we need to push the software release deadline</strong></em>, or <em><strong>Anita send a follow up email to the customer</strong></em> or <em><strong>Anita we need to check on shipment delivery</strong></em> etc.,
 
-7. Now, go to Anita’s workstation (workstation 1) over WebRDP and the current meeting window. Explore any of the <strong>AI Assistant</strong> options available: <strong>Catch</strong><strong> me up</strong> or <strong>Was</strong><strong> my name mentioned</strong>? Or <strong>What are the action items</strong>?
+7. Now, go to Anita’s workstation (workstation 1) over WebRDP and the current meeting window. Explore any of the <strong>AI Assistant</strong> options available: <strong>Catch me up</strong> or <strong>Was</strong><strong> my name mentioned</strong>? Or <strong>What are the action items</strong>?
 
 <a class="figure-link" href="assets/source-guide/image54.png" target="_blank" rel="noopener" aria-label="Open screenshot 54 at full size"><img class="source-figure" src="assets/source-guide/image54.png" width="1882" height="1230" style="width:min(100%,1882px);aspect-ratio:1882/1230" alt="A screenshot of a video chat
 

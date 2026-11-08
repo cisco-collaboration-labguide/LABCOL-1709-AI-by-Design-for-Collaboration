@@ -2,7 +2,7 @@
 
 [Read the online guide](https://cisco-collaboration-labguide.github.io/LABCOL-1709-AI-by-Design-for-Collaboration/)
 
-The online guide follows the updated Word document supplied on 7 November 2026: **CLMEL26 - LABCOL-1709 AI by Design for Collaboration - Lab Guide (3).docx**, by Hussain Ali and Omer Ilyas.
+The online guide follows the updated Word document supplied on 8 November 2026: **CLMEL26 - LABCOL-1709 AI by Design for Collaboration - Lab Guide (4).docx**, by Hussain Ali and Omer Ilyas.
 
 The original section order and instructional wording are retained, with concise page titles, descriptive step headings, restrained emphasis, standard notes, and captioned screenshots. The Word table of contents becomes grouped web navigation with separate exercise pages; page numbers and blank page-layout paragraphs are omitted. Screenshots open at full resolution when clicked.
 
@@ -14,7 +14,7 @@ All 61 Word image assets are accounted for: 51 instructional screenshots, seven 
 
 ## Public edition
 
-All instructional screenshots are included exactly as supplied, including sample passwords, session details, and account examples, as requested by the guide owner. Eight paragraphs containing private access values or password construction rules use assigned-session placeholders. The 60 image assets include the source branding, inline icons, and instructional screenshots. The original Word file is not published.
+All instructional screenshots are included exactly as supplied, including sample passwords, session details, and account examples, as requested by the guide owner. The 60 image assets include the source branding, inline icons, and instructional screenshots. The original Word file is not published.
 
 The source document is the authority for this synchronization. Technical suggestions from the previous review are not silently applied; this publication does not claim that the lab has been executed or validated. The older formatted Word file retained in repository history and the file tree is a previous edition, not the current online content.
 

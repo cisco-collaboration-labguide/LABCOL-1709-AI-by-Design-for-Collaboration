@@ -16,8 +16,7 @@
         "accessing-your-lab",
         "connect-to-the-workstations-via-remote-desktop",
         "login-to-the-webex-clients",
-        "login-to-collaboration-control-hub-from-within-workstation-1",
-        "alternate-instructions-for-accessing-collaboration-control-hub"
+        "login-to-collaboration-control-hub-from-within-workstation-1"
       ]
     },
     {
@@ -101,7 +100,6 @@
     "connect-to-the-workstations-via-remote-desktop": "getting-started/index.html",
     "login-to-the-webex-clients": "getting-started/index.html",
     "login-to-collaboration-control-hub-from-within-workstation-1": "getting-started/index.html",
-    "alternate-instructions-for-accessing-collaboration-control-hub": "getting-started/index.html",
     "module-1-setup-your-lab-environment": "setup/index.html",
     "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub": "setup/index.html",
     "module-2-enhancing-messaging-with-webex-ai": "messaging/ask-assistant/index.html",

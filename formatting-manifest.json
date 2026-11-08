@@ -10,7 +10,7 @@
     },
     {
       "path": "getting-started/index.md",
-      "step_headings": 0,
+      "step_headings": 4,
       "captioned_screenshots": 8
     },
     {
@@ -65,7 +65,6 @@
     "connect-to-the-workstations-via-remote-desktop": "getting-started/",
     "login-to-the-webex-clients": "getting-started/",
     "login-to-collaboration-control-hub-from-within-workstation-1": "getting-started/",
-    "alternate-instructions-for-accessing-collaboration-control-hub": "getting-started/",
     "module-1-setup-your-lab-environment": "setup/",
     "module-1a-activating-and-configuring-the-cisco-ai-assistant-in-the-control-hub": "setup/",
     "module-2-enhancing-messaging-with-webex-ai": "messaging/ask-assistant/",
